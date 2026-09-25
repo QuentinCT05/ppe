@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^$ /4saisons/edition [R=301,L]

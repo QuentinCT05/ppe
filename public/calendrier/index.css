@@ -1,0 +1,19 @@
+#calendrier h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid var(--bs-primary);
+}
+
+#calendrier .card {
+    border-radius: .75rem;
+}
+
+#calendrier .card-title {
+    margin-bottom: 1rem;
+}
+
+#calendrier p {
+    margin-bottom: .4rem;
+}
+

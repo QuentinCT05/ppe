@@ -1,0 +1,22 @@
+{
+  "conteneur": "menu",
+  "options": [
+    {
+      "label": "🏠",
+      "href": "/"
+    },
+    {
+      "label": "Présentation",
+      "href": "/4saisons/presentation"
+    },
+    {
+      "label": "Prochaines éditions",
+      "href": "/4saisons/edition"
+    },
+    {
+      "label": "Les Parcours",
+      "href": "/4saisons/parcours"
+    }
+  ]
+}
+

@@ -1,0 +1,57 @@
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Les modules
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <div style="max-width: 48rem; margin-top : 15px">
+            <H4 style='text-align: center; color : darkcyan; font-weight: bold '>
+                Ajouter un module d'administration
+            </H4>
+            <div class="border p-3 mb-3">
+                <div id="msg"></div>
+                <label for="repertoire" class=" obligatoire">
+                    Répertoire
+                </label>
+                <input id="repertoire"
+                       type="text"
+                       required
+                       pattern="^[a-zA-Z0-9]{3,50}$"
+                       maxlength=50
+                       minlength="3"
+                       autocomplete="off">
+                <label for="repertoire" class=" obligatoire">
+                    Nom
+                </label>
+                <input id="nom"
+                       type="text"
+                       required
+                       pattern="^[A-Za-zÀ-ÖØ-öø-ÿ0-9](?:[A-Za-zÀ-ÖØ-öø-ÿ0-9' \-]*[A-Za-zÀ-ÖØ-öø-ÿ0-9])?$"
+                       maxlength=150
+                       minlength=10
+                       autocomplete="off">
+                <div style="text-align: center; margin: 5px">
+                    <button id='btnAjouter' class="btn btn-sm btn-success">✚ Ajouter</button>
+                </div>
+            </div>
+
+            <h4 style="text-align: center">Liste des fonctions d'administration</h4>
+            <div class='table-responsive'>
+                <table class='table table-sm table-borderless'>
+                    <thead>
+                    <tr>
+                        <th style="width:200px">Répertoire</th>
+                        <th style="width:400px">Nom</th>
+                    </tr>
+                    </thead>
+                    <tbody id="lesLignes"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

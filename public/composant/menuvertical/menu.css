@@ -1,0 +1,172 @@
+/* Style de base pour la sidebar */
+
+:root {
+    --menu-width: 160px; /* Valeur par défaut utilisée par CSS */
+}
+
+#sidebar {
+    width: var(--menu-width); /* valeur par défaut si non spécifiée */
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #f8f9fa; /* bg-light */
+    padding: 1rem;
+    overflow-y: auto;
+    /* transition: all 0.3s ease; */
+    z-index: 1050;
+}
+
+#sidebar .nav-link.active {
+    color: darkblue !important;
+    font-weight: bold;
+}
+
+/* Contenu principal déplacé à droite du menu */
+main {
+    margin-left: var(--menu-width, 160px);
+    /* transition: margin-left 0.3s ease, width 0.3s ease; */
+}
+
+/* Menu replié (collapsed) */
+#sidebar.collapsed {
+    width: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    /* transition: width 0.3s ease, padding 0.3s ease; */
+}
+
+#sidebar.collapsed * {
+    display: none;
+}
+
+/* Quand le menu est replié, on étend le main */
+#sidebar.collapsed + main,
+main.collapsed {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+/* Bouton pour replier le menu */
+#toggleMenu {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Bouton pour afficher le menu (mobile) */
+#showMenu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    display: none;
+}
+
+/* Overlay semi-transparent en mobile */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    /* transition: opacity 0.3s ease; */
+    z-index: 1040;
+}
+
+/* Overlay visible */
+#overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Styles des liens */
+#sidebar ul.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+#sidebar ul.nav li.nav-item {
+    margin-bottom: 0.25rem;
+}
+
+#sidebar ul.nav li.nav-item a.nav-link {
+    color: #333;
+    padding: 0.375rem 0.75rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#sidebar ul.nav li.nav-item a.nav-link:hover,
+#sidebar ul.nav li.nav-item a.nav-link:focus {
+    background-color: #e9ecef;
+    color: #000;
+}
+
+/* Ligne verticale à gauche (optionnel) */
+#sidebar .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: lawngreen;
+    transform: scaleY(0);
+    transition: transform 0.2s ease;
+    border-radius: 2px;
+}
+
+/* Styles pour les liens du menu */
+#sidebar .nav-link {
+    position: relative;
+    padding-left: 12px;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color :#0d6efd
+}
+
+#sidebar .nav-link:hover::before {
+    transform: scaleY(1);
+}
+
+/* Responsive - sur petits écrans */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 160px;
+        position: fixed;
+        left: -160px;
+        top: 0;
+        height: 100vh;
+        padding: 1rem;
+        transition: left 0.3s ease;
+        z-index: 1050;
+    }
+
+    /* Sidebar visible sur mobile */
+    #sidebar:not(.collapsed) {
+        left: 0;
+    }
+
+    /* Contenu principal full width sur mobile */
+    main {
+        margin-left: 0;
+        width: 100% !important;
+    }
+
+    /* Bouton menu visible */
+    #showMenu {
+        display: block;
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "conteneur": "menu",
+  "options": [
+    {
+      "label": "🏠",
+      "href": "/"
+    },
+    {
+      "label": "👤 Espace membre",
+      "href": "/membre/accueil"
+    }
+  ]
+}

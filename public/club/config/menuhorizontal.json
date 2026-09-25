@@ -1,0 +1,25 @@
+{
+  "conteneur": "menu",
+  "options": [
+    {
+      "label": "🏠",
+      "href": "/"
+    },
+    {
+      "label": "Présentation",
+      "href": "/club/presentation"
+    },
+    {
+      "label": "Entrainement",
+      "href": "/club/entrainement"
+    },
+    {
+      "label": "Adhésion",
+      "href": "/club/adhesion"
+    },
+    {
+      "label": "Formation",
+      "href": "/club/formation"
+    }
+  ]
+}

@@ -1,0 +1,1105 @@
+/* ------------------------------------------------------------
+   Feuille de style globale
+   Version : 2026.09.15
+------------------------------------------------------------ */
+
+
+/* =========================================================
+   VARIABLES GLOBALES
+   ========================================================= */
+
+:root {
+    --background-color: white;
+    --background-color-thead: transparent;
+
+    --entete-bg-start: #0f4c81;
+    --entete-bg-end: #1769aa;
+
+    --entete-background: linear-gradient(
+            135deg,
+            var(--entete-bg-start),
+            var(--entete-bg-end)
+    );
+
+    --text-color: #282828;
+
+    --border-color-table: #68a0dd;
+
+    --taille-police: clamp(12px, 0.5vw + 12px, 20px);
+
+    --champ-background: white;
+    --champ-border: #ced4da;
+    --champ-focus: var(--entete-bg-end);
+    --champ-radius: 8px;
+    --champ-height: 42px;
+}
+
+
+/* =========================================================
+   NORMALISATION
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+html,
+body {
+    height: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-family: 'PT Serif', serif;
+    font-size: var(--taille-police);
+    font-weight: 400;
+
+    background: var(--background-color);
+    color: var(--text-color);
+
+    overflow-x: hidden;
+}
+
+
+html {
+    font-size: var(--taille-police);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   ZONE PRINCIPALE
+   ========================================================= */
+
+main {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 5px;
+}
+
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   LIENS
+   ========================================================= */
+
+a,
+a:hover,
+a:visited,
+a:active {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TABLEAUX
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    margin: 10px 0;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    background-color: var(--background-color);
+
+    border: 1px solid var(--border-color-table);
+}
+
+
+tr {
+    line-height: 1.4;
+}
+
+
+thead {
+    font-weight: bold;
+
+    color: #ffffff;
+    background-color: #0790e4;
+}
+
+
+thead th {
+    padding: 10px 8px;
+
+    text-align: left;
+
+    border-bottom: 2px solid var(--border-color-table);
+
+    white-space: nowrap;
+}
+
+
+tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+tbody tr:hover {
+    background-color: #e8f1f8;
+}
+
+
+td {
+    padding: 8px;
+
+    vertical-align: top;
+
+    border-right: 1px solid #e5e7eb;
+}
+
+
+td:last-child,
+th:last-child {
+    border-right: none;
+}
+
+
+tr:active {
+    background-color: #dbeafe;
+}
+
+/* colonne des actions des tableaux */
+
+.td-actions {
+    vertical-align: middle;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.td-actions > * {
+    vertical-align: middle;
+}
+
+
+.td-actions button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    vertical-align: middle;
+}
+
+
+
+table a {
+    color: #1565c0;
+
+    font-weight: 500;
+}
+
+
+table a:hover {
+    color: #0d47a1;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CHAMPS GÉNÉRAUX
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-right: 10px;
+
+    color: #6c6c6c;
+
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding: .375rem .75rem;
+
+    border: 1px solid lightgray;
+    border-radius: 0;
+
+    color: #0f7df5;
+
+    outline: 0;
+    box-shadow: none;
+}
+
+
+input[type="date"] {
+    width: 180px;
+}
+
+
+input:disabled,
+select:disabled {
+    border: 1px solid lightgray;
+
+    border-radius: 0;
+
+    cursor: not-allowed;
+}
+
+
+input:focus,
+select:focus {
+    border: 2px solid dodgerblue;
+    border-radius: 0;
+
+    background-color: #fcfcfc;
+
+    outline: 0;
+    box-shadow: none;
+}
+
+
+input::placeholder {
+    font-size: .8rem;
+}
+
+
+/* =========================================================
+   CASES À COCHER
+   ========================================================= */
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+
+    appearance: none;
+
+    border: 1px solid #1d1d1d;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+
+input[type="checkbox"]:checked {
+    background-color: #81ed81;
+
+    border: 1px solid #1d1d1d;
+}
+
+
+/* =========================================================
+   INPUT NUMBER
+   ========================================================= */
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+
+/* =========================================================
+   LISTES DÉROULANTES
+   ========================================================= */
+
+select {
+    width: 100%;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    padding: .375rem .75rem;
+
+    border: 1px solid lightgray;
+    border-radius: 0;
+
+    color: #0f7df5;
+
+    outline: 0;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   OUTPUT GÉNÉRAL
+   ========================================================= */
+
+output {
+    display: inline-block;
+
+    min-width: 150px;
+    min-height: 38px;
+
+    padding: .375rem .75rem;
+
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+
+    background-color: #e7e6e6;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   CARTES DE PAGE
+   ========================================================= */
+
+.page-card {
+    width: 99%;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ENTÊTE DE LA CARTE
+   ========================================================= */
+
+.page-card .page-header {
+    width: 100%;
+
+    margin: 0;
+    padding: 1rem 1.2rem;
+
+    background: var(--entete-background);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   TITRE + ACTIONS
+   ========================================================= */
+
+.page-card .page-header-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    width: 100%;
+}
+
+
+.page-card .page-title {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+
+    text-decoration: none;
+}
+
+
+.page-card .page-title.masquer {
+    display: none;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.page-card .page-header-actions {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: .75rem;
+
+    flex: 0 0 auto;
+}
+
+
+.page-card .page-header-actions .btn {
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   FILTRES
+   ========================================================= */
+
+.page-card .page-header-filters {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: .75rem;
+
+    width: 100%;
+
+    margin-top: .9rem;
+}
+
+
+/* =========================================================
+   ZONE D'UN FILTRE
+   ========================================================= */
+
+.page-card .page-header-filters .zone-recherche {
+    flex: 0 1 500px;
+
+    width: 500px;
+    max-width: 100%;
+
+    min-width: 0;
+
+    margin: 0;
+}
+
+
+.page-card .page-header-filters .zone-recherche
++ .zone-recherche {
+    flex-basis: 250px;
+
+    width: 250px;
+}
+
+
+/* =========================================================
+   LABEL DES FILTRES
+   ========================================================= */
+
+.page-card .page-header-filters .zone-recherche label {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+.page-card .page-header-filters .zone-recherche label.afficher {
+    position: static;
+
+    width: auto;
+    height: auto;
+
+    margin: 0 0 .35rem;
+
+    overflow: visible;
+
+    clip: auto;
+    clip-path: none;
+
+    white-space: normal;
+
+    color: #ffffff;
+
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTRÔLES DES FILTRES
+   ========================================================= */
+
+.page-card .page-header-filters .zone-recherche input,
+.page-card .page-header-filters .zone-recherche select {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CORPS DE LA CARTE
+   ========================================================= */
+
+.page-card .page-body {
+    width: 100%;
+    padding: 0.5rem;
+    background: #ffffff;
+}
+
+
+/*
+ * Lorsqu'un tableau constitue directement le contenu
+ * principal du corps, celui-ci utilise toute la largeur.
+ */
+
+.page-card .page-body:has(> table),
+.page-card .page-body:has(> div > table) {
+    padding: 0;
+}
+
+
+/* =========================================================
+   BLOCS D'INFORMATIONS
+   ========================================================= */
+
+/*
+ * Grille utilisée lorsque le corps contient directement
+ * des blocs d'informations.
+ *
+ * Les formulaires utilisant .zone-informations-formulaire
+ * disposent de leur propre grille.
+ */
+
+.page-card .page-body:has(> .bloc-info) {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 1rem;
+}
+
+
+/* =========================================================
+   BLOC D'INFORMATIONS
+   ========================================================= */
+
+.bloc-info {
+    min-width: 0;
+
+    padding: 20px;
+
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TITRE DU BLOC
+   ========================================================= */
+
+.bloc-info h2 {
+    margin: 0 0 1rem;
+
+    padding: .8rem;
+
+    background: rgb(119 164 228);
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   CHAMP D'UNE FICHE
+   ========================================================= */
+
+.champ {
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   LIBELLÉ D'UN CHAMP
+   ========================================================= */
+
+/*
+ * Les formulaires d'ajout utilisent <label>.
+ */
+
+.bloc-info .champ > label {
+    display: block;
+
+    margin: 0 0 .3rem;
+
+    color: #6c757d;
+
+    font-size: .9rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/*
+ * Les formulaires de modification utilisent parfois
+ * <span> comme libellé.
+ */
+
+.bloc-info .champ > span {
+    display: block;
+
+    margin-bottom: .3rem;
+
+    color: #6c757d;
+
+    font-size: .8rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   COMMENTAIRES DES LABELS
+   ========================================================= */
+
+.bloc-info .champ .commentaire {
+    color: #8a8a8a;
+
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   CHAMPS DES BLOCS
+   ========================================================= */
+
+.bloc-info .champ input:not([type="checkbox"]),
+.bloc-info .champ select,
+.bloc-info .champ output.champ-sortie {
+    width: 100%;
+
+    height: var(--champ-height);
+    min-height: var(--champ-height);
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: .375rem .75rem;
+
+    border: 1px solid var(--champ-border);
+    border-radius: var(--champ-radius);
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   INPUT ET SELECT
+   ========================================================= */
+
+.bloc-info .champ input:not([type="checkbox"]),
+.bloc-info .champ select {
+    background-color: var(--champ-background);
+
+    color: #0f7df5;
+}
+
+
+/* =========================================================
+   OUTPUT DES FICHES
+   ========================================================= */
+
+.bloc-info .champ output.champ-sortie {
+    display: flex;
+
+    align-items: center;
+
+    background-color: #f8f9fa;
+
+    color: #212529;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+
+/* =========================================================
+   FOCUS DES CHAMPS
+   ========================================================= */
+
+.bloc-info .champ input:not([type="checkbox"]):focus,
+.bloc-info .champ select:focus {
+    border: 2px solid var(--champ-focus);
+
+    border-radius: var(--champ-radius);
+
+    background-color: #fcfcfc;
+
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   CHAMP DATE
+   ========================================================= */
+
+.bloc-info .champ input[type="date"] {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CHECKBOX DES BLOCS
+   ========================================================= */
+
+.bloc-info .ligne-checkbox {
+    display: flex;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+
+
+.bloc-info .ligne-checkbox input[type="checkbox"] {
+    flex: 0 0 auto;
+
+    width: 25px;
+    height: 25px;
+    min-height: 25px;
+
+    margin: 0;
+}
+
+
+.bloc-info .ligne-checkbox label {
+    display: inline;
+
+    margin: 0;
+
+    color: #6c757d;
+
+    font-size: .9rem;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   ZONE DES BLOCS DU FORMULAIRE D'AJOUT
+   ========================================================= */
+
+.zone-informations-formulaire {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 1rem;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   ZONE DES BLOCS DU FORMULAIRE DE MODIFICATION
+   ========================================================= */
+
+.zone-informations {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   FORMULAIRE
+   ========================================================= */
+
+#formulaire {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BOUTONS DU FORMULAIRE
+   ========================================================= */
+
+#btnAjouter,
+#btnModifier,
+#btnSupprimer {
+    min-height: 40px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .zone-informations {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETTE / MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* -----------------------------------------------------
+       Titre + actions
+       ----------------------------------------------------- */
+
+    .page-card .page-header-top {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: .75rem;
+    }
+
+
+    .page-card .page-title {
+        font-size: 1.2rem;
+    }
+
+
+    /* -----------------------------------------------------
+       Actions
+       ----------------------------------------------------- */
+
+    .page-card .page-header-actions {
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+
+    /* -----------------------------------------------------
+       Filtres
+       ----------------------------------------------------- */
+
+    .page-card .page-header-filters {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: .5rem;
+    }
+
+
+    .page-card .page-header-filters .zone-recherche,
+    .page-card .page-header-filters .zone-recherche
+    + .zone-recherche {
+        width: 100%;
+        max-width: none;
+
+        flex: 1 1 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       Tableaux
+       ----------------------------------------------------- */
+
+    table {
+        font-size: .9rem;
+    }
+
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+
+    /* -----------------------------------------------------
+       Formulaire d'ajout
+       ----------------------------------------------------- */
+
+    .zone-informations-formulaire {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -----------------------------------------------------
+       Formulaire de modification
+       ----------------------------------------------------- */
+
+    .zone-informations {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -----------------------------------------------------
+       Date
+       ----------------------------------------------------- */
+
+    .bloc-info .champ input[type="date"] {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   TRÈS PETITS ÉCRANS
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .page-card {
+        width: 100%;
+
+        border-radius: 10px;
+    }
+
+
+    .page-card .page-header {
+        padding: .85rem 1rem;
+    }
+
+
+    .page-card .page-body {
+        padding: 1rem;
+    }
+
+
+    .bloc-info {
+        padding: 15px;
+    }
+
+
+    .bloc-info h2 {
+        padding: .7rem;
+
+        font-size: 1.05rem;
+    }
+
+}

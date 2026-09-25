@@ -1,0 +1,133 @@
+    /* ==========================================================
+Gestion de la photo du membre
+========================================================== */
+
+    .photo-upload {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ----------------------------------------------------------
+    Zone de dépôt
+    ---------------------------------------------------------- */
+
+    .photo-upload .upload {
+        width: 300px;
+        height: 300px;
+        border: 2px dashed #adb5bd;
+        border-radius: 12px;
+        background: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        cursor: pointer;
+        transition: border-color .2s ease,
+        background-color .2s ease,
+        color .2s ease,
+        transform .2s ease;
+
+    }
+
+    .photo-upload .upload:hover {
+        border-color: #0d6efd;
+        background: #eef5ff;
+        color: #0d6efd;
+        transform: translateY(-2px);
+    }
+
+    /* ----------------------------------------------------------
+    Contenu de la zone vide
+    ---------------------------------------------------------- */
+
+    .photo-upload-icon {
+        font-size: 3rem;
+        line-height: 1;
+
+        margin-bottom: .8rem;
+
+    }
+
+    .photo-upload-text {
+        font-size: .9rem;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    /* ----------------------------------------------------------
+    Bouton supprimer
+    ---------------------------------------------------------- */
+
+    #btnSupprimer {
+        width: 200px;
+    }
+
+    /* ----------------------------------------------------------
+    Bloc de consignes
+    ---------------------------------------------------------- */
+
+    .photo-consignes {
+        padding: 1.25rem;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+    }
+
+    .photo-consignes h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #1d3557;
+        font-size: 1.25rem;
+
+    }
+
+    .photo-consignes p {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    /* ----------------------------------------------------------
+    Bloc conseils
+    ---------------------------------------------------------- */
+
+    .photo-info {
+        margin: 1rem 0;
+        padding: .9rem 1rem;
+        background: white;
+        border-left: 4px solid #457b9d;
+        border-radius: 6px;
+    }
+
+    .photo-info strong {
+        color: #1d3557;
+    }
+
+    .photo-info ul {
+        margin: .5rem 0 0;
+        padding-left: 1.2rem;
+    }
+
+    .photo-info li {
+        margin-bottom: .3rem;
+    }
+
+    /* ----------------------------------------------------------
+    Lien de redimensionnement
+    ---------------------------------------------------------- */
+
+    .photo-redimensionnement {
+        font-size: .9rem;
+        color: #6c757d;
+    }
+
+    /* ----------------------------------------------------------
+    Mobile
+    ---------------------------------------------------------- */
+
+    @media screen and (max-width: 767px) {
+        .photo-consignes {
+            margin-top: .5rem;
+        }
+    }

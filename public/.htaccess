@@ -1,0 +1,30 @@
+# interdire de lister le contenu des répertoires (erreur 403 générée)
+Options -Indexes
+
+# par défaut le fichier index.php sera recherché en premier
+DirectoryIndex index.php
+
+# rédirection des erreurs 401, 403 et 404 vers des pages personnalisées
+ErrorDocument 404 /erreur/404.php
+ErrorDocument 403 /erreur/403.php
+ErrorDocument 401 /erreur/401.php
+
+# redirection automatique de tous les .html vers les .php
+RewriteEngine On
+RewriteRule ^(.*)\.html$ $1.php [NC,L]
+
+# ---------------------------------------------------------------
+# Protection des endpoints AJAX : accès autorisé uniquement si
+# la requête contient l'en-tête X-Requested-With: XMLHttpRequest
+# (envoyé automatiquement par ajax.js sur chaque appel)
+# ---------------------------------------------------------------
+
+# Si l'URI contient "/ajax/" et que l'en-tête X-Requested-With n'est pas égal à XMLHttpRequest, alors refuser l'accès (403 Forbidden)
+RewriteCond %{REQUEST_URI} /ajax/
+RewriteCond %{HTTP:X-Requested-With} !^XMLHttpRequest$ [NC]
+RewriteRule ^ - [F,L]
+
+# ^ signifie n'importe quelle URL
+# - signifie ne pas faire de redirection (on reste sur la même URL)
+# [F] signifie que l'accès est interdit (403 Forbidden)
+# [L] signifie que c'est la dernière règle à appliquer (stop processing)

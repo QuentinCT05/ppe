@@ -1,0 +1,224 @@
+/* ==========================================================
+   Calculateur d'allure
+   ========================================================== */
+
+.allure-container {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.allure-card {
+    max-width: 500px;
+    margin: auto;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+    overflow: hidden;
+}
+
+.allure-card .card-header {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    padding: 1rem 1.25rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.allure-saisie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.allure-btn {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+
+    background: #f8f9fa;
+    color: #1d3557;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color .15s ease,
+    color .15s ease;
+}
+
+.allure-btn:hover {
+    background: #1d3557;
+    color: white;
+}
+
+.allure-input {
+    width: 70px;
+    height: 48px;
+
+    border: 2px solid #457b9d;
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    color: #1d3557;
+}
+
+.allure-separateur {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+.allure-unite {
+    margin-left: .25rem;
+
+    font-size: .9rem;
+    color: #6c757d;
+}
+
+/* Suppression des flèches des input number */
+.allure-input::-webkit-inner-spin-button,
+.allure-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.allure-input {
+    -moz-appearance: textfield;
+}
+
+/* ----------------------------------------------------------
+   Allures rapides
+   ---------------------------------------------------------- */
+
+.allures-rapides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem;
+
+    margin-top: 1rem;
+}
+
+.allure-rapide {
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+
+    background: white;
+    color: #1d3557;
+
+    padding: .3rem .7rem;
+
+    font-size: .8rem;
+
+    cursor: pointer;
+
+    transition: all .15s ease;
+}
+
+.allure-rapide:hover,
+.allure-rapide.active {
+    background: #1d3557;
+    border-color: #1d3557;
+    color: white;
+}
+
+/* ==========================================================
+   Tableau
+   ========================================================== */
+
+#tableau {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+#tableau table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+}
+
+#tableau th {
+    padding: .7rem .5rem;
+
+    background: #1d3557;
+    color: white;
+
+    font-size: .9rem;
+    text-align: center;
+}
+
+#tableau td {
+    padding: .55rem .5rem;
+
+    border-bottom: 1px solid #eee;
+
+    text-align: center;
+}
+
+#tableau tr:last-child td {
+    border-bottom: none;
+}
+
+#tableau tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+#tableau tbody tr:hover {
+    background: #eef5ff;
+}
+
+#tableau td:nth-child(even) {
+    font-weight: 600;
+    color: #1d3557;
+}
+
+/* ----------------------------------------------------------
+   Mobile
+   ---------------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+
+    .allure-container {
+        margin-top: 1rem;
+        padding: 0 .5rem;
+    }
+
+    .allure-card .card-header {
+        font-size: 1rem;
+    }
+
+    .allure-input {
+        width: 60px;
+    }
+
+    #tableau {
+        padding: 0 .25rem;
+    }
+
+    #tableau th,
+    #tableau td {
+        padding: .45rem .25rem;
+        font-size: .8rem;
+    }
+}

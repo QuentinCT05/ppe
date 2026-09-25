@@ -1,0 +1,16 @@
+/* Sécurité pour que le conteneur ne déborde pas */
+#info {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 10px 10px 10px 10px;
+}
+
+/* L'image prend 100% de la largeur du conteneur */
+#info img {
+    width: 95%;
+    height: auto;       /* Conserve le ratio image sans déformer */
+    display: block;     /* Supprime l'espace blanc indésirable sous l'image */
+    border-radius: 8px; /* Optionnel : pour arrondir légèrement les coins */
+    text-align: center;
+}

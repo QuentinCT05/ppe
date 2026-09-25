@@ -1,0 +1,42 @@
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Les catégories pour la saison en cours
+            </h1>
+            <div class="page-header-actions">
+
+                <button id="btnPdf" class="btn btn-primary">Télécharger le tableau en PDF</button>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <div style="text-align: center; margin:15px">
+            <div style="display: inline-block; text-align: left;">
+                <div style="text-align: center; margin-bottom: 1rem;">
+
+                </div>
+                <!-- Zone à exporter en PDF -->
+                <div id="pdfContent" style="text-align: center;">
+                    <h1 class="page-title">Tableau des catégories pour la saison en cours</h1>
+                    <div style="display: inline-block; text-align: left;">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Catégorie</th>
+                                <th>Code</th>
+                                <th>Âge entre</th>
+                                <th>Né(e) entre</th>
+                                <th>Distance maximale</th>
+                            </tr>
+                            </thead>
+                            <tbody id="lesLignes"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 3306,
+    "name": "ppe",
+    "user": "root",
+    "password": ""
+  },
+  "tables": {
+
+    "epreuve": [
+      "saison",
+      "description",
+      "date"
+    ],
+    "membre": [
+      "id",
+      "login",
+      "password",
+      "nom",
+      "prenom",
+      "email",
+      "telephone",
+      "photo",
+      "autMail",
+      "saison"
+    ],
+    "administrateur": [
+      "id"
+    ],
+    "fonction": [
+      "repertoire",
+      "nom"
+    ],
+    "droit": [
+      "idAdministrateur",
+      "repertoire"
+    ],
+    "coureur": [
+      "id",
+      "nom",
+      "prenom",
+      "annee",
+      "sexe"
+    ],
+    "resultat": [
+      "idCourse",
+      "place",
+      "idCoureur",
+      "categorie",
+      "placeCategorie",
+      "temps",
+      "club"
+    ],
+    "course": [
+      "id",
+      "date",
+      "saison",
+      "distance",
+      "nbParticipant"
+    ]
+  }
+}
+

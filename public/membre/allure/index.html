@@ -1,0 +1,70 @@
+<h1 class="page-title">Temps de passage sur chaque km en fonction de votre allure</h1>
+<div class="allure-container">
+    <div class="card allure-card">
+        <div class="card-header text-white">
+            Votre allure sur 1 km
+        </div>
+        <div class="card-body">
+            <menu></menu>
+            <div class="allure-saisie">
+                <button type="button" id="moinsMinute" class="allure-btn" aria-label="Diminuer les minutes">
+                    −
+                </button>
+
+                <input type="number" id="minute" class="allure-input" min="2" max="7" value="4" inputmode="numeric"
+                       aria-label="Minutes par kilomètre">
+                <button type="button" id="plusMinute" class="allure-btn" aria-label="Augmenter les minutes">
+                    +
+                </button>
+                <span class="allure-separateur">:</span>
+                <button type="button" id="moinsSeconde" class="allure-btn" aria-label="Diminuer les secondes">
+                    −
+                </button>
+                <input type="number" id="seconde" class="allure-input" min="0" max="59" value="15" inputmode="numeric"
+                       aria-label="Secondes par kilomètre"
+                >
+
+                <button type="button" id="plusSeconde" class="allure-btn" aria-label="Augmenter les secondes">
+                    +
+                </button>
+                <span class="allure-unite">min/km</span>
+            </div>
+            <div class="allures-rapides">
+                <button type="button" class="allure-rapide" data-minute="3" data-seconde="30">
+                    3:30
+                </button>
+                <button type="button" class="allure-rapide" data-minute="4" data-seconde="00">
+                    4:00
+                </button>
+                <button type="button" class="allure-rapide active" data-minute="4" data-seconde="15">
+                    4:15
+                </button>
+                <button type="button" class="allure-rapide" data-minute="4" data-seconde="30">
+                    4:30
+                </button>
+                <button type="button" class="allure-rapide" data-minute="5" data-seconde="00">
+                    5:00
+                </button>
+                <button type="button" class="allure-rapide" data-minute="5" data-seconde="30">
+                    5:30
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tableau">
+    <table>
+        <thead>
+        <tr>
+            <th>Distance</th>
+            <th>Temps</th>
+            <th>Distance</th>
+            <th>Temps</th>
+            <th>Distance</th>
+            <th>Temps</th>
+        </tr>
+        </thead>
+        <tbody id="lesLignes"></tbody>
+    </table>
+</div>

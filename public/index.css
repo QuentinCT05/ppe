@@ -1,0 +1,82 @@
+    /* Structure générale de la page d'accueil */
+.home-pages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.home-card {
+    border: 1px solid #dbe8f6;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home-card .card-header.entete {
+    font-weight: 600;
+    background: linear-gradient(90deg, #0790e4, #0aa2f0);
+    color: #ffffff;
+}
+
+.home-card__content {
+    padding: 1rem;
+}
+
+/* Mise en valeur de la prochaine épreuve (sur une seule ligne) */
+.home-next-event {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* S'adapte proprement sur petits écrans si besoin */
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #f0f7ff;
+    border: 1px solid #cce3fa;
+    border-left: 4px solid #0790e4;
+    border-radius: 8px;
+}
+
+.home-next-event__label {
+    font-weight: 600;
+    color: #1c4d77;
+}
+
+.home-next-event__date {
+    display: inline-block;
+    font-weight: 700;
+    color: #d90429; /* Rouge d'accentuation */
+    background-color: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #fecdd3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Liste des liens utiles */
+.home-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.home-link-list__item {
+    display: block;
+    border: 1px solid #d6e4f4;
+    border-radius: 8px;
+    background-color: #f8fbff;
+    padding: 0.55rem 0.7rem;
+    color: #1c5f99 !important;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.home-link-list__item:hover {
+    transform: translateX(3px);
+    background-color: #eef6ff;
+    color: #ff3333 !important;
+}

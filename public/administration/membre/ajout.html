@@ -1,0 +1,52 @@
+<menu></menu>
+
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Nouveau membre
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <div class="formulaire p-3" style="max-width: 42rem">
+            <div id="msg"></div>
+
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <label for="nom">Nom</label>
+                    <input id="nom"
+                           type="text"
+                           required
+                           maxlength="30"
+                           pattern="^[A-Za-z]([A-Za-z ]*[A-Za-z]){1,29}$"
+                           autocomplete="family-name">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="prenom">Prénom</label>
+                    <input id="prenom"
+                           type="text"
+                           required
+                           maxlength="30"
+                           pattern="^[A-Za-z]([A-Za-z ]*[A-Za-z]){1,29}$"
+                           autocomplete="given-name">
+                </div>
+
+                <div class="col-12">
+                    <label for="email">Adresse e-mail</label>
+                    <input id="email"
+                           type="email"
+                           required
+                           maxlength="254"
+                           autocomplete="email">
+                </div>
+
+                <div class="col-12 mt-2">
+                    <button id="btnAjouter" type="button" class="btn btn-danger"> Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

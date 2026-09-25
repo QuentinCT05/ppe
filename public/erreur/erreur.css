@@ -1,0 +1,84 @@
+/* Réinitialisation globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Conteneur de la carte */
+.card {
+    width: 100%;
+    max-width: 32rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* En-tête de la carte */
+.card-header {
+    background-color: #ffc107; /* couleur d'arrière-plan de la carte */
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Corps de la carte */
+.card-body {
+    padding: 1rem;
+    color: #dc3545; /* couleur de texte pour les erreurs */
+    text-align: justify;
+}
+
+/* Style pour le texte rappel de la loi */
+.loi {
+    text-align: left;
+    color: darkblue;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Détails de la loi */
+.loi-details {
+    color: darkblue;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+/* Pied de la carte */
+.card-footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+/* Liens dans le pied */
+.card-footer a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

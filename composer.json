@@ -1,0 +1,21 @@
+{
+  "autoload": {
+    "psr-4": {
+      "ClasseTechnique\\": "src/ClasseTechnique/",
+      "ClasseMetier\\": "src/ClasseMetier/",
+      "Service\\": "src/Service/"
+    }
+  },
+  "require": {
+    "gumlet/php-image-resize": "2.0.*",
+	"ezyang/htmlpurifier": "^4.19",
+    "ext-mbstring": "*",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "mpdf/mpdf": "^8.2",
+    "ext-iconv": "*",
+    "ext-curl": "*",
+    "ext-libxml": "*",
+    "ext-dom": "*"
+  }
+}

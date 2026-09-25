@@ -1,0 +1,9 @@
+AuthType Basic
+AuthUserFile "j:/VirtualHostSlam/ppe/public/backoffice/.htpasswd"
+AuthName "Administration"
+require valid-user
+
+# protection du fichier .htpasswd
+<Files ".htpasswd">
+    Require all denied
+</Files>

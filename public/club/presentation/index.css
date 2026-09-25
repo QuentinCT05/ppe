@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Présentation générale
+   ========================================================================== */
+
+.club-page {
+    width: 100%;
+
+    margin: 0 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.club-page h2 {
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dc3545;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.club-page p {
+    margin: 0 0 15px;
+}
+
+.club-section {
+    margin-bottom: 45px;
+}
+
+
+/* ==========================================================================
+   En-tête
+   ========================================================================== */
+
+.club-header {
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #343a40;
+    color: #fff;
+}
+
+.club-header img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    opacity: .72;
+}
+
+.club-header__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+    background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, .78),
+            rgba(0, 0, 0, .05)
+    );
+}
+
+.club-header h1 {
+    margin: 0 0 8px;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.club-header p {
+    max-width: 750px;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   Présentation du club
+   ========================================================================== */
+
+.club-intro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.club-intro__card {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.club-intro__card h3 {
+    margin: 0 0 12px;
+    color: #dc3545;
+    font-size: 1.15rem;
+}
+
+
+/* ==========================================================================
+   Valeurs / caractéristiques
+   ========================================================================== */
+
+.club-values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.club-value {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.club-value__icon {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+.club-value strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* ==========================================================================
+   Organisation des compétitions
+   ========================================================================== */
+
+.club-evenement {
+    padding: 25px;
+    border-left: 4px solid #dc3545;
+    border-radius: 0 10px 10px 0;
+    background: #f8f9fa;
+}
+
+.club-evenement h3 {
+    margin: 0 0 10px;
+    color: #dc3545;
+}
+
+
+/* ==========================================================================
+   Entraîneurs
+   ========================================================================== */
+
+.club-entraineurs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.club-entraineur {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.club-entraineur h3 {
+    margin: 0 0 5px;
+    color: #dc3545;
+    font-size: 1.2rem;
+}
+
+.club-entraineur__fonction {
+    margin-bottom: 15px;
+    color: #666;
+    font-weight: 600;
+}
+
+.club-entraineur__accroche {
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   Marche nordique
+   ========================================================================== */
+
+.club-marche {
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f8f9fa;
+}
+
+.club-marche h3 {
+    margin: 0 0 15px;
+    color: #dc3545;
+}
+
+.club-marche ul {
+    margin: 15px 0;
+    padding-left: 22px;
+}
+
+
+/* ==========================================================================
+   Comité directeur
+   ========================================================================== */
+
+.club-comite {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.club-comite__membre {
+    display: grid;
+    grid-template-columns: minmax(190px, 1fr) 80px minmax(0, 2fr);
+    gap: 20px;
+    align-items: start;
+    padding: 18px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.club-comite__nom {
+    font-weight: 700;
+}
+
+.club-comite__annee {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.club-comite__fonction {
+    color: #555;
+}
+
+.club-comite__vacant {
+    color: #999;
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.club-contact {
+    padding: 30px;
+    border-radius: 14px;
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+}
+
+.club-contact h2 {
+    color: #fff;
+    border: none;
+}
+
+.club-contact a {
+    color: #fff;
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 700px) {
+
+    .club-header {
+        margin-bottom: 30px;
+    }
+
+    .club-header img {
+        height: 300px;
+    }
+
+    .club-header__content {
+        padding: 22px;
+    }
+
+    .club-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .club-header p {
+        font-size: 1rem;
+    }
+
+    .club-intro,
+    .club-values {
+        grid-template-columns: 1fr;
+    }
+
+    .club-section {
+        margin-bottom: 35px;
+    }
+
+    .club-intro__card,
+    .club-entraineur,
+    .club-marche {
+        padding: 20px;
+    }
+
+    .club-comite__membre {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 18px;
+    }
+
+    .club-comite__annee {
+        font-size: .9rem;
+    }
+}
+

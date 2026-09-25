@@ -1,0 +1,303 @@
+    .courses-page {
+
+        margin: 0 0;
+        padding: 20px;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .courses-page h1 {
+        margin: 0 0 25px;
+        font-size: 2rem;
+        color: #222;
+    }
+
+    .courses-page h2 {
+        margin: 40px 0 20px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #dc3545;
+        font-size: 1.45rem;
+        color: #222;
+    }
+
+    .courses-page h3 {
+        margin: 25px 0 10px;
+        font-size: 1.15rem;
+        color: #333;
+    }
+
+    .intro {
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+    }
+
+    /* --------------------------------------------------
+       Informations principales
+       -------------------------------------------------- */
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        margin: 25px 0;
+    }
+
+    .info-card {
+        padding: 20px;
+        border-radius: 12px;
+        background: #f7f7f7;
+        border: 1px solid #e2e2e2;
+    }
+
+    .info-card strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+
+    .info-card.highlight {
+        background: #fff4f4;
+        border-color: #f1b5b5;
+    }
+
+    /* --------------------------------------------------
+       Courses
+       -------------------------------------------------- */
+
+    .courses-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 20px 0 30px;
+    }
+
+    .course {
+        display: grid;
+        grid-template-columns: 90px 180px 1fr;
+        gap: 20px;
+        align-items: center;
+
+        padding: 16px 20px;
+
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        background: #fff;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .05);
+    }
+
+    .course-time {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #dc3545;
+    }
+
+    .course-name {
+        font-weight: 700;
+    }
+
+    /* --------------------------------------------------
+       Encadré important
+       -------------------------------------------------- */
+
+    .notice {
+        margin: 25px 0;
+        padding: 20px;
+        border-radius: 12px;
+        background: #fff8e6;
+        border-left: 5px solid #f0ad4e;
+    }
+
+    .notice strong {
+        color: #9a6500;
+    }
+
+    .notice-danger {
+        background: #fff1f1;
+        border-left-color: #dc3545;
+    }
+
+    /* --------------------------------------------------
+       Stop & Go
+       -------------------------------------------------- */
+
+    .stop-go {
+        margin: 25px 0;
+        padding: 22px;
+        border-radius: 12px;
+        background: #f8f9fa;
+        border: 1px solid #ddd;
+    }
+
+    .stop-go h3 {
+        margin-top: 0;
+        color: #dc3545;
+    }
+
+    .stop-go ol {
+        margin-bottom: 0;
+    }
+
+    /* --------------------------------------------------
+       Tarifs
+       -------------------------------------------------- */
+
+    .prices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .price {
+        padding: 20px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        background: #fff;
+    }
+
+    .price strong {
+        display: block;
+        font-size: 1.7rem;
+        color: #dc3545;
+    }
+
+    .price span {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .price.free {
+        background: #f1fff6;
+        border-color: #a8dfbd;
+    }
+
+    .price.free strong {
+        color: #198754;
+    }
+
+    /* --------------------------------------------------
+       Pack 4 courses
+       -------------------------------------------------- */
+
+    .pack {
+        margin: 25px 0;
+        padding: 25px;
+        border-radius: 14px;
+        background: #fff4f4;
+        border: 2px solid #dc3545;
+    }
+
+    .pack h3 {
+        margin-top: 0;
+        color: #dc3545;
+    }
+
+    /* --------------------------------------------------
+       Dates
+       -------------------------------------------------- */
+
+    .dates {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .date {
+        padding: 8px 14px;
+        border-radius: 20px;
+        background: #f1f1f1;
+        font-weight: 600;
+    }
+
+    .date.label {
+        background: #fff0f0;
+        color: #dc3545;
+    }
+
+    /* --------------------------------------------------
+       Inscription
+       -------------------------------------------------- */
+
+    .inscription {
+        margin: 25px 0;
+        padding: 25px;
+        text-align: center;
+        border-radius: 14px;
+        background: #f5f7fa;
+        border: 1px solid #ddd;
+    }
+
+    .inscription a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 12px 22px;
+        border-radius: 8px;
+        color: white;
+        background: #dc3545;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .inscription a:hover {
+        background: #bb2d3b;
+    }
+
+    /* --------------------------------------------------
+       Listes
+       -------------------------------------------------- */
+
+    .courses-page ul {
+        padding-left: 25px;
+    }
+
+    .courses-page li {
+        margin-bottom: 8px;
+    }
+
+    /* --------------------------------------------------
+       Mobile
+       -------------------------------------------------- */
+
+    @media (max-width: 700px) {
+
+        .courses-page {
+            padding: 15px;
+        }
+
+        .courses-page h1 {
+            font-size: 1.6rem;
+        }
+
+        .courses-page h2 {
+            font-size: 1.3rem;
+        }
+
+        .info-grid,
+        .prices {
+            grid-template-columns: 1fr;
+        }
+
+        .course {
+            display: block;
+            padding: 18px;
+        }
+
+        .course-time {
+            margin-bottom: 3px;
+        }
+
+        .course-name {
+            margin-bottom: 8px;
+        }
+
+        .dates {
+            flex-direction: column;
+        }
+
+        .date {
+            text-align: center;
+        }
+    }

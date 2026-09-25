@@ -1,0 +1,19 @@
+{
+  "base_de_donnees": {
+    "host": "localhost",
+    "port": 3306,
+    "nom": "ppe",
+    "utilisateur": "root",
+    "mot_de_passe": ""
+  },
+  "controles": [
+    {
+      "nom": "Photos des membres",
+      "table": "membre",
+      "colonne_fichier": "photo",
+      "repertoire": "../../public/data/photomembre",
+      "colonnes_affichage": ["id", "nom", "prenom"],
+      "extensions": ["jpg", "jpeg", "png", "webp"]
+    }
+  ]
+}

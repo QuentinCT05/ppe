@@ -1,0 +1,71 @@
+.autoComplete_wrapper > input {
+
+}
+
+
+.autoComplete_wrapper > ul {
+    position: absolute;
+    max-width: 350px;
+    overflow-y: hidden;
+    left: 0;
+    right: 0;
+    margin: .5rem 0 0 0;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
+    border-radius: .6rem;
+    background-color: #fff;
+    border: 1px solid #C0C0C0;
+    outline: 0;
+}
+
+.autoComplete_wrapper > ul:empty, .autoComplete_wrapper > ul[hidden] {
+    display: block;
+    opacity: 0;
+    transform: scale(0)
+}
+
+.autoComplete_wrapper > ul > li {
+    margin: .4rem;
+    padding: .3rem .5rem;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #212121;
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 801px) {
+    .autoComplete_wrapper > ul > li {
+        margin: 0.2rem;
+        padding: 0.2rem 0.5rem;
+        line-height: 1.2;
+    }
+}
+
+.autoComplete_wrapper > ul > li mark {
+    background-color: transparent;
+    color: #ff0000;
+    font-weight: 700;
+    display: inline; /* Assure que la balise <mark> est inline sans espace */
+    padding: 0; /* Enlève les marges internes éventuelles */
+    margin: 0; /* Enlève les marges externes éventuelles */
+}
+
+.autoComplete_wrapper > ul > li:hover {
+    cursor: pointer;
+    background-color: #e1dede;
+}
+
+.autoComplete_wrapper > ul > li[aria-selected=true] {
+    background-color: #e1dede;
+}
+
+@media only screen and (max-width: 600px) {
+    .autoComplete_wrapper > input {
+        width: 18rem
+    }
+}
+

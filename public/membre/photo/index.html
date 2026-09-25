@@ -1,0 +1,61 @@
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Ajoutez votre photo à l'annuaire des membres
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <div class="formulaire m-1">
+            <div id="msg" class="mb-3"></div>
+            <div class="row g-4 align-items-center">
+                <!-- Zone photo -->
+                <div class="col-12 col-md-5 text-center">
+                    <div class="photo-upload">
+                        <div id="cible" class="upload"></div>
+                        <input type="file" id="fichier" accept=".jpg,.jpeg,.png,.gif" hidden>
+                        <button id="btnSupprimer" type="button" class="btn btn-sm btn-danger text-white mt-3"
+                                style="display: none;">
+                            Supprimer ma photo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Informations -->
+                <div class="col-12 col-md-7">
+                    <div class="photo-consignes">
+                        <h2>Ma photo</h2>
+                        <p>
+                            Vous pouvez déposer votre photo directement dans la zone
+                            prévue à cet effet ou cliquer dessus pour sélectionner
+                            un fichier sur votre ordinateur.
+                        </p>
+
+                        <div class="photo-info">
+                            <strong>Conseils</strong>
+                            <ul>
+                                <li>Utilisez de préférence une photo récente.</li>
+                                <li>Le visage doit être clairement visible.</li>
+                                <li>La photo sera automatiquement redimensionnée en
+                                    <strong>200 × 200 pixels</strong>.
+                                </li>
+                                <li>Sa taille initiale ne doit pas dépasser <b>200 Mo</b></li>
+                            </ul>
+                        </div>
+                        <p class="photo-redimensionnement">
+                            Si le résultat ne correspond pas à vos attentes, vous
+                            pouvez redimensionner votre photo avant de la télécharger :
+                        </p>
+                        <a href="https://resizeyourimage.com/FR/" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-outline-primary btn-sm">
+                            Redimensionner ma photo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

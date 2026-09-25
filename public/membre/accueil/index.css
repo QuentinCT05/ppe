@@ -1,0 +1,69 @@
+/* ====== Sécurité du conteneur parent ====== */
+#divFonction {
+    max-width: 100%;
+    overflow: hidden; /* Empêche la liste d'élargir toute la page */
+}
+
+/* ====== Liste horizontale des fonctions ====== */
+.admin-fonctions-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    display: flex;
+    /* AUTORISE LE PASSAGE À LA LIGNE */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px;
+    width: 100%;
+}
+
+/* Masque la barre de défilement sous Chrome/Safari */
+.admin-fonctions-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* ====== Éléments ====== */
+.admin-fonctions-item {
+    /* flex-grow: 1 permet aux boutons de s'élargir pour remplir les lignes */
+    flex: 1 1 auto;
+    text-align: center;
+    background-color: #d2e3f3;
+    border-radius: 6px;
+}
+
+.admin-fonctions-item:hover {
+    background-color: #b9d3f0;
+    transform: translateY(-2px);
+}
+
+/* ====== Liens ====== */
+.admin-fonctions-link {
+    display: block;
+    text-decoration: none;
+    font-style: italic;
+    color: #0a2e75;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    line-height: 1.2;
+    /* On retire white-space: nowrap si un bouton contient un texte très long */
+}
+
+.admin-fonctions-link:hover {
+    color: #1a73e8;
+}
+
+.admin-fonctions-link:focus-visible {
+    outline: 2px solid #0a2e75;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ====== Adaptation grands écrans (Tablettes / PC) ====== */
+@media (min-width: 768px) {
+    .admin-fonctions-list {
+        flex-wrap: wrap; /* Les boutons passent à la ligne s'il n'y a plus de place */
+        justify-content: flex-start;
+        overflow-x: visible; /* Désactive le défilement horizontal inutile sur PC */
+    }
+}

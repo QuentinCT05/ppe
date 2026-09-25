@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/recherche.css">
+<link rel="stylesheet" href="/css/autocomplete.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.10/dist/autoComplete.min.js"></script>
+<div class="page-card" style = "min-height: 600px">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Espace d’administration de l’Amicale du Val de Somme
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <h1 class="page-title" style='color : darkcyan; font-weight: bold; margin-top: 20px '>
+            Ajouter un nouvel administrateur
+        </h1>
+        <div id="frmAjout" class="formulaire" style="max-width: 800px">
+            <div id="msg"></div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="zone-recherche recherche-autocomplete">
+                    <label for="search" style="display: none">
+                        Nom du licencié
+                    </label>
+                    <div class="champ-recherche">
+                        <div class="input-recherche">
+                            <div class="autoComplete_wrapper">
+                                <input
+                                        id="search"
+                                        type="text"
+                                        placeholder="Saisir les premières lettres du nom"
+                                        autocomplete="off">
+                            </div>
+                            <span class="icone-recherche" aria-hidden="true">⌕</span>
+                        </div>
+                    </div>
+                </div>
+                <button id='btnAjouter' class="btn btn-sm btn-success">✚ Ajouter</button>
+            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th style="width:50px"></th>
+                    <th style="min-width: 300px">Liste des administrateurs</th>
+                </tr>
+                </thead>
+                <tbody id="lesLignes"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

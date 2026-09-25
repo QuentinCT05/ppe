@@ -1,0 +1,243 @@
+/* --------------------------------------------------------------------------
+   Page entraînements
+   -------------------------------------------------------------------------- */
+
+.entrainements {
+    width: 100%;
+    margin: 0 0;
+    color: #333;
+}
+
+/* --------------------------------------------------------------------------
+   En-tête
+   -------------------------------------------------------------------------- */
+
+.entrainements-header {
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    border-radius: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #dc3545, #a71d2a);
+    text-align: center;
+}
+
+
+.entrainements-header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: .95;
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+
+.entrainements-section {
+    margin-bottom: 40px;
+}
+
+.entrainements-section > h2 {
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dc3545;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Informations pratiques
+   -------------------------------------------------------------------------- */
+
+.entrainements-pratique {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.entrainements-info {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+
+.entrainements-info h3 {
+    margin: 0 0 15px;
+    color: #dc3545;
+    font-size: 1.15rem;
+}
+
+.entrainements-info p {
+    margin: 0 0 10px;
+}
+
+.entrainements-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Horaires
+   -------------------------------------------------------------------------- */
+
+.entrainement-horaire {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.entrainement-horaire:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.entrainement-horaire strong {
+    display: block;
+    color: #333;
+    font-size: 1.05rem;
+}
+
+.entrainement-heure {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Entraîneurs
+   -------------------------------------------------------------------------- */
+
+.entraineurs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.entraineur {
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.entraineur h3 {
+    margin: 0 0 5px;
+    color: #dc3545;
+    font-size: 1.25rem;
+}
+
+.entraineur-fonction {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.entraineur-accroche {
+    margin: 0 0 15px;
+    font-weight: 700;
+    color: #333;
+}
+
+.entraineur p {
+    margin: 0 0 12px;
+}
+
+.entraineur p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Mise en évidence
+   -------------------------------------------------------------------------- */
+
+.entrainement-highlight {
+    margin-top: 20px;
+    padding: 20px 25px;
+    border-left: 4px solid #dc3545;
+    border-radius: 0 10px 10px 0;
+    background: #f8f9fa;
+}
+
+.entrainement-highlight strong {
+    color: #dc3545;
+}
+
+/* --------------------------------------------------------------------------
+   Marche nordique
+   -------------------------------------------------------------------------- */
+
+.marche-nordique {
+    padding: 25px;
+    border-radius: 12px;
+    background: #f8f9fa;
+}
+
+.marche-nordique h3 {
+    margin: 0 0 15px;
+    color: #dc3545;
+}
+
+.marche-nordique ul {
+    margin: 15px 0;
+    padding-left: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+
+.entrainements-contact {
+    padding: 30px;
+    border-radius: 14px;
+    color: #fff;
+    background: #343a40;
+    text-align: center;
+}
+
+.entrainements-contact h2 {
+    margin: 0 0 12px;
+    color: #fff;
+    border: none;
+}
+
+.entrainements-contact p {
+    margin: 8px 0;
+}
+
+.entrainements-contact a {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .entrainements-header {
+        margin-bottom: 25px;
+        padding: 5px 8px;
+    }
+
+
+    .entrainements-header p {
+        font-size: 1rem;
+    }
+
+    .entrainements-pratique {
+        grid-template-columns: 1fr;
+    }
+
+    .entrainements-info,
+    .entraineur,
+    .marche-nordique {
+        padding: 20px;
+    }
+
+    .entrainements-section {
+        margin-bottom: 30px;
+    }
+}

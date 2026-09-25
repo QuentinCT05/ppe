@@ -1,0 +1,99 @@
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Complétez votre profil pour l'annuaire des membres
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <div class="formulaire">
+            <div id="msg"></div>
+
+            <!-- Informations du membre -->
+            <div class="mb-1">
+                <h5 class="mb-1">Mes informations</h5>
+                <output id="nom"></output>
+                <output id="email"></output>
+                <div class="form-text small">
+                    Pour demander une modification de votre adresse email,
+                    veuillez contacter l'association.
+                </div>
+            </div>
+
+
+            <!-- Paramétrage de l'annuaire -->
+            <div class="border rounded p-3 bg-light">
+
+                <h5 class="mb-0">
+                    Affichage dans l'annuaire
+                </h5>
+
+                <p class="text-muted small mb-0">
+                    L'annuaire est accessible uniquement aux membres de l'association.
+                    Vous pouvez choisir les coordonnées que vous souhaitez rendre
+                    visibles aux autres membres.
+                </p>
+
+
+                <!-- Téléphone -->
+                <div class="mb-0">
+
+                    <label for="telephone" class="form-label fw-semibold">
+                        Numéro de téléphone
+                    </label>
+
+                    <input id="telephone"
+                           type="text"
+                           class="form-control"
+                           placeholder="Ex. : 0612345678"
+                           maxlength="10"
+                           minlength="10"
+                           pattern="^0[1-9]\d{8}$"
+                           autocomplete="tel">
+
+                    <div class="form-text mt-0">
+                        <strong>Important :</strong>
+                        en renseignant votre numéro de téléphone, vous consentez
+                        à ce qu'il soit affiché dans l'annuaire des membres.
+                        <br>
+                        Laissez ce champ vide si vous ne souhaitez pas afficher
+                        votre numéro de téléphone.
+                    </div>
+
+                </div>
+                <!-- Email -->
+                <div>
+
+                    <div class="form-check">
+                        <input type="checkbox"
+                               class="form-check-input"
+                               id="autMail">
+
+                        <label class="form-check-label fw-semibold" for="autMail">
+                            Je souhaite afficher mon adresse email dans l'annuaire
+                        </label>
+                    </div>
+
+                    <div class="form-text ms-4 mt-0">
+                        En cochant cette case, vous autorisez l'affichage de votre
+                        adresse email dans l'annuaire accessible aux membres.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Enregistrement -->
+            <button id="btnModifier"
+                    type="button"
+                    class="w-100 mt-0 btn btn-outline-danger">
+                Enregistrer mes modifications
+            </button>
+
+        </div>
+    </div>
+</div>

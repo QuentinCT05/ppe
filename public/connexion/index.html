@@ -1,0 +1,184 @@
+<style>
+    /* =========================================================
+       PAGE DE CONNEXION
+    ========================================================= */
+
+    .connexion-page {
+        width: 100%;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        background: #f5f6f8;
+    }
+
+    /* =========================================================
+       CARTE
+    ========================================================= */
+
+    .connexion-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 2rem;
+        box-sizing: border-box;
+        background: #fff;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+    }
+
+    /* =========================================================
+       TITRE
+    ========================================================= */
+
+    .connexion-title {
+        margin: 0 0 1.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* =========================================================
+       MESSAGE
+    ========================================================= */
+
+    .connexion-msg {
+        margin-bottom: 1rem;
+    }
+
+    /* =========================================================
+       CHAMPS
+    ========================================================= */
+
+    .connexion-field {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .connexion-field label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .connexion-field .form-control {
+        display: block;
+        width: 100%;
+        min-height: 46px;
+        padding: 0.7rem 0.85rem;
+        box-sizing: border-box;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        background: #fff;
+        color: #333;
+        font-size: 0.95rem;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .connexion-field .form-control::placeholder {
+        color: #8a8f98;
+        opacity: 1;
+    }
+
+    .connexion-field .form-control:focus {
+        border-color: #80bdff;
+        outline: none;
+        box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.15);
+    }
+
+    /* =========================================================
+       BOUTON
+    ========================================================= */
+
+    .connexion-button {
+        display: block;
+        width: 100%;
+        min-height: 46px;
+        margin-top: 0.5rem;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 480px) {
+        .connexion-page {
+            min-height: 100vh;
+            padding: 1rem;
+        }
+
+        .connexion-card {
+            padding: 1.5rem;
+            border: none;
+        }
+
+        .connexion-title {
+            font-size: 1.35rem;
+        }
+    }
+</style>
+
+<div class="connexion-page">
+
+    <div class="connexion-card">
+
+        <h1 class="connexion-title">
+            Connexion 
+        </h1>
+
+        <div id="msg"
+             class="connexion-msg"
+             role="alert"
+             aria-live="assertive"
+             aria-atomic="true">
+        </div>
+
+        <div class="connexion-field">
+            <label for="login">Login</label>
+
+            <input id="login"
+                   name="login"
+                   type="text"
+                   class="form-control"
+                   placeholder="Login"
+                   autocomplete="username"
+                   required
+                   aria-required="true">
+        </div>
+
+        <div class="connexion-field">
+            <label for="password">Mot de passe</label>
+
+            <input id="password"
+                   name="password"
+                   type="password"
+                   class="form-control"
+                   placeholder="Mot de passe"
+                   autocomplete="current-password"
+                   required
+                   aria-required="true">
+        </div>
+
+        <button id="btnValider"
+                type="button"
+                class="mb-3 btn btn-primary connexion-button"
+                accesskey="c"
+                title="Connexion — raccourci clavier Alt+C">
+            Connexion
+        </button>
+
+    </div>
+
+</div>

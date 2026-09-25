@@ -1,0 +1,74 @@
+    /* page membre */
+    .member-page {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: var(--layout-max-width);
+        margin: 0 0;
+        padding: 6px 0 14px;
+    }
+
+    .member-hero {
+        border-radius: 14px;
+        padding: 1rem 1.1rem;
+        background: linear-gradient(135deg, #0a7fd4 0%, #2ea3f2 55%, #56b6ff 100%);
+        box-shadow: 0 12px 24px rgba(7, 69, 121, 0.2);
+        color: #fff;
+    }
+
+    .member-hero__title {
+        margin: 0;
+        font-size: clamp(1.35rem, 1.05rem + 1.15vw, 2rem);
+        font-weight: 700;
+    }
+
+    .member-hero__subtitle {
+        margin: 0.4rem 0 0.8rem;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .member-hero__cta {
+        font-weight: 600;
+    }
+
+    .member-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .member-card {
+        border: 1px solid #dbe8f6;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 14px rgba(8, 56, 98, 0.08);
+    }
+
+    .member-card .card-header.entete {
+        font-weight: 600;
+    }
+
+    .member-card__content {
+        padding: 10px;
+    }
+
+    .member-card--scroll .member-card__content {
+        max-height: 430px;
+        overflow-y: auto;
+    }
+    @media (max-width: 768px) {
+        .member-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .member-profile-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .member-page,
+        .member-login-page {
+            padding: 4px 0 10px;
+        }
+    }
+
+

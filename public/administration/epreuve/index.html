@@ -1,0 +1,31 @@
+
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Planification des 4 saisons
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <div class="formulaire" style="max-width: 48rem">
+
+            <label for="saison">Sélectionnez la saison</label>
+            <select class="form-select" id="saison" style="width: 300px"></select>
+
+            <!-- Date -->
+            <label for="date" class="obligatoire" title="Date de l'épreuve">Date </label>
+            <input id="date"
+                   type="date"
+                   required>
+
+            <label for="description" class="obligatoire ">Description</label>
+            <textarea id="description" required></textarea>
+            <div class="d-flex justify-content-evenly">
+                <button id="btnModifier" class="w-100 btn btn-sm btn-outline-danger mt-3">Modifier</button>
+            </div>
+        </div>
+    </div>
+</div>

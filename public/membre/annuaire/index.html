@@ -1,0 +1,103 @@
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Annuaire des membres
+            </h1>
+            <div class="page-header-actions">
+                <p class="coureur-count">
+                    <span class="coureur-count-label">
+                        Nombre de coureurs :
+                    </span>
+                    <span id="nb" class="coureur-count-value"></span>
+                </p>
+
+            </div>
+        </div>
+        <div class="page-header-filters">
+            <!-- Affichage : cartes ou tableau -->
+
+            <div class="mt-2 d-flex align-items-center gap-2">
+                    <input class="annuaire-mode__input" type="radio" name="modeAnnuaire" id="modeCartes" value="cartes">
+                    <label class="annuaire-mode__label" for="modeCartes">🪪 Cartes</label>
+                    <input class="annuaire-mode__input" type="radio" name="modeAnnuaire" id="modeTableau" value="tableau">
+                    <label class="annuaire-mode__label" for="modeTableau">📋 Tableau</label>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <!-- Filtres -->
+
+        <div class="annuaire-filtres">
+
+            <!-- Filtre sur la saison -->
+            <div id="zoneSaison" class="annuaire-filtre-saison" style="visibility: hidden">
+                <label for="saison">Saison</label>
+                <select id="saison">
+                </select>
+            </div>
+
+            <!-- Filtre sur le nom ou le prénom -->
+            <div id="zoneFiltre" class="annuaire-filtre-recherche">
+                <div class="annuaire-recherche">
+                    <span class="annuaire-recherche__icone" aria-hidden="true">🔎</span>
+                    <input
+                            id="nomR"
+                            type="text"
+                            aria-label="Rechercher par nom ou prénom"
+                            placeholder="Nom ou prénom"
+                    >
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <p class="m-1">
+            Nombre d'adhérents : <span id="nb"></span>
+        </p>
+
+        <div class="annuaire-membres" id="liste"></div>
+
+        <!-- ========================================================================== -->
+        <!-- Modèle d'une carte membre -->
+        <!-- ========================================================================== -->
+
+        <template id="template-membre">
+            <article class="annuaire-membre">
+                <!-- Informations du membre -->
+                <div class="annuaire-membre__infos">
+                    <h2 class="annuaire-membre__nom"></h2>
+                    <div class="annuaire-membre__contact">
+                        <!-- Adresse mail -->
+                        <a class="annuaire-membre__contact-link annuaire-membre__mail">
+                            <span class="annuaire-membre__icone">✉</span>
+                            <span class="annuaire-membre__mail-texte"></span>
+                        </a>
+                        <span class="annuaire-membre__mail-masque">
+                    <span class="annuaire-membre__icone">✉</span>
+                    Adresse mail masquée
+                </span>
+                        <!-- Téléphone -->
+                        <a class="annuaire-membre__contact-link annuaire-membre__telephone">
+                            <span class="annuaire-membre__icone">☎</span>
+                            <span class="annuaire-membre__telephone-texte"></span>
+                        </a>
+                        <span class="annuaire-membre__telephone-masque">
+                    <span class="annuaire-membre__icone">☎</span>
+                    Téléphone non renseigné
+                </span>
+                    </div>
+                </div>
+                <!-- Photo -->
+                <div class="annuaire-membre__photo">
+                    <img class="annuaire-membre__image" alt="">
+                </div>
+            </article>
+        </template>
+    </div>
+</div>
+

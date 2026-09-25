@@ -1,0 +1,78 @@
+/* ====== Menu horizontal ====== */
+#menuHorizontal {
+    background-color: #ffffff;
+    padding: 6px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ====== Liste ====== */
+#menuHorizontal ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* AUTORISE LE PASSAGE À LA LIGNE */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px;
+    width: 100%;
+}
+
+/* Masque la barre de défilement sous Webkit (Chrome/Safari) */
+#menuHorizontal ul::-webkit-scrollbar {
+    display: none;
+}
+
+/* ====== Éléments du menu ====== */
+#menuHorizontal li,
+menu li {
+    flex: 1 1 auto; /* Ajuste la largeur automatiquement */
+    text-align: center;
+    background-color: #d2e3f3;
+    border-radius: 6px;
+}
+
+#menuHorizontal li:hover {
+    background-color: #b9d3f0;
+    transform: translateY(-2px);
+}
+
+/* ====== Liens ====== */
+#menuHorizontal a,
+menu a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #0a2e75;
+    text-decoration: none;
+}
+
+/* ====== Élément actif ====== */
+#menuHorizontal li.actif {
+    background-color: #e63946 !important;
+}
+
+#menuHorizontal li.actif a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#menuHorizontal a:hover {
+    color: #1a73e8;
+}
+
+/* ====== Adaptation grands écrans (Tablettes / PC) ====== */
+@media (min-width: 768px) {
+    #menuHorizontal ul {
+        flex-wrap: wrap; /* Autorise le passage à la ligne si besoin */
+        justify-content: flex-start;
+        overflow-x: visible; /* Plus besoin du scroll sur grand écran */
+    }
+
+    #menuHorizontal a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

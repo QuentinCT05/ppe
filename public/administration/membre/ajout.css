@@ -1,0 +1,57 @@
+    /* ── Formulaire ── */
+
+    .formulaire {
+        width: 100%;
+        max-width: 900px;
+        box-sizing: border-box;
+        margin: 10px auto;
+        padding: 20px;
+
+        border: 1px solid #ccc;
+        border-radius: 15px;
+    }
+
+    /* Les champs ne doivent jamais dépasser du formulaire */
+    .formulaire input[type="text"] {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    /* ── Bouton Ajouter ── */
+
+    #btnAjouter {
+        width: 100%;
+        margin-top: 15px;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #dc3545;
+        cursor: pointer;
+        transition: background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    #btnAjouter:hover {
+        background-color: #bb2d3b;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
+    }
+
+    #btnAjouter:active {
+        transform: translateY(0);
+    }
+
+    /* ── Petits écrans ── */
+
+    @media (max-width: 600px) {
+
+        .formulaire {
+            margin: 5px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+    }

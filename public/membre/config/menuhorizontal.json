@@ -1,0 +1,29 @@
+{
+  "conteneur": "menu",
+  "options": [
+    {
+      "label": "🏠",
+      "href": "/"
+    },
+    {
+      "label": "👤 Espace membre",
+      "href": "/membre/accueil"
+    },
+    {
+      "label": "Annuaire des membres",
+      "href": "/membre/annuaire"
+    },
+    {
+      "label": "\uD83D\uDC64 Mon profil",
+      "href": "/membre/profil"
+    },
+    {
+      "label": " \uD83D\uDCF7 Ma photo",
+      "href": "/membre/photo"
+    },
+    {
+      "label": "🚪 Déconnexion",
+      "href": "/membre/deconnexion"
+    }
+  ]
+}

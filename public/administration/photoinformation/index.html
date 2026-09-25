@@ -1,0 +1,24 @@
+<div class="page-card">
+    <header class="page-header">
+        <div class="page-header-top">
+            <h1 class="page-title">
+                Gestion des photos utilisables dans les informations
+            </h1>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <menu></menu>
+        <div id="cible" class="upload" style="height: 300px;">
+            Cliquez ou glissez-déposez vos images dans ce cadre pour les ajouter à la galerie.
+            <br>
+            Formats acceptés : JPG, JPEG, PNG, WEBP ou AVIF
+            <br>
+            Taille maximale : 350 Ko
+            <br>
+            L'image sera redimensionnée afin de ne pas dépasser 350 px en largeur
+        </div>
+        <input type="file" id="fichier" accept=".jpg,.jpeg,.png,.webp,.avif" style='display:none'>
+        <div id='lesCartes'></div>
+    </div>
+</div>

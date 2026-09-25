@@ -1,0 +1,18 @@
+[
+  {
+    "label": "🏠",
+    "href": "/"
+  },
+  {
+    "label": "🎽 Le club",
+    "href": "/club/presentation"
+  },
+  {
+    "label": "🏃 Les 4 saisons",
+    "href": "/4saisons/presentation"
+  },
+  {
+    "label": "👤 Espace membre",
+    "href": "/membre"
+  }
+]

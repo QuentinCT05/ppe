@@ -1,0 +1,6 @@
+# Ce répertoire ne contient que des ressources statiques (JS, CSS).
+# Toute tentative d'exécution de fichier PHP est interdite.
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
